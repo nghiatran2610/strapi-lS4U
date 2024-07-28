@@ -368,12 +368,16 @@ export interface ApiAdAd extends Schema.CollectionType {
     singularName: 'ad';
     pluralName: 'ads';
     displayName: 'Ad';
+    description: '';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
-    title: Attribute.String;
+    Title: Attribute.String;
+    Description: Attribute.Blocks;
+    Image: Attribute.Media;
+    Link: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
