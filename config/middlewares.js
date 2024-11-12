@@ -10,6 +10,8 @@ module.exports = [
           'img-src': ["'self'", 'data:', 'blob:', 'res.cloudinary.com'],
           'media-src': ["'self'", 'data:', 'blob:', 'res.cloudinary.com'],
           upgradeInsecureRequests: null,
+          'script-src': ['https://cdn.ckeditor.com']
+
         },
       },
     },
