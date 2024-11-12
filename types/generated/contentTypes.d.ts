@@ -804,6 +804,13 @@ export interface ApiAdAd extends Schema.CollectionType {
     Description: Attribute.Blocks;
     Image: Attribute.Media;
     Link: Attribute.String;
+    testck5: Attribute.RichText &
+      Attribute.CustomField<
+        'plugin::ckeditor5.CKEditor',
+        {
+          preset: 'default';
+        }
+      >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
