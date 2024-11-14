@@ -16,10 +16,6 @@
       "type": "string",
       "required": true
     },
-    "content": {
-      "type": "blocks",
-      "required": true
-    },
     "excerpt": {
       "type": "text"
     },
@@ -101,6 +97,10 @@
       "relation": "manyToMany",
       "target": "api::tag.tag",
       "inversedBy": "blog_posts"
+    },
+    "content": {
+      "type": "blocks",
+      "required": true
     }
   }
 }

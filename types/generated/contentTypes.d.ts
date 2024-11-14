@@ -872,7 +872,6 @@ export interface ApiBlogPostBlogPost extends Schema.CollectionType {
   };
   attributes: {
     title: Attribute.String & Attribute.Required;
-    content: Attribute.Blocks & Attribute.Required;
     excerpt: Attribute.Text;
     featuredImage: Attribute.Media;
     focusKeywords: Attribute.JSON;
@@ -901,6 +900,7 @@ export interface ApiBlogPostBlogPost extends Schema.CollectionType {
       'manyToMany',
       'api::tag.tag'
     >;
+    content: Attribute.Blocks & Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
