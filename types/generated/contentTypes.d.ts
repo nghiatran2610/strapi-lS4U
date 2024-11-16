@@ -928,10 +928,10 @@ export interface ApiCategoryCategory extends Schema.CollectionType {
     description: '';
   };
   options: {
-    draftAndPublish: true;
+    draftAndPublish: false;
   };
   attributes: {
-    name: Attribute.String & Attribute.Required;
+    name: Attribute.String & Attribute.Required & Attribute.Unique;
     description: Attribute.Text;
     blog_posts: Attribute.Relation<
       'api::category.category',
@@ -940,7 +940,6 @@ export interface ApiCategoryCategory extends Schema.CollectionType {
     >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
       'api::category.category',
       'oneToOne',
@@ -965,10 +964,10 @@ export interface ApiTagTag extends Schema.CollectionType {
     description: '';
   };
   options: {
-    draftAndPublish: true;
+    draftAndPublish: false;
   };
   attributes: {
-    name: Attribute.String & Attribute.Required;
+    name: Attribute.String & Attribute.Required & Attribute.Unique;
     description: Attribute.Text;
     blog_posts: Attribute.Relation<
       'api::tag.tag',
@@ -977,7 +976,6 @@ export interface ApiTagTag extends Schema.CollectionType {
     >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<'api::tag.tag', 'oneToOne', 'admin::user'> &
       Attribute.Private;
     updatedBy: Attribute.Relation<'api::tag.tag', 'oneToOne', 'admin::user'> &
