@@ -4,7 +4,8 @@
   "info": {
     "singularName": "event",
     "pluralName": "events",
-    "displayName": "Event"
+    "displayName": "Event",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -43,6 +44,17 @@
         "blog"
       ],
       "default": "top"
+    },
+    "bannerImage": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
     }
   }
 }

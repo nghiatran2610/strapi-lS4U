@@ -961,6 +961,7 @@ export interface ApiEventEvent extends Schema.CollectionType {
     singularName: 'event';
     pluralName: 'events';
     displayName: 'Event';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -980,6 +981,7 @@ export interface ApiEventEvent extends Schema.CollectionType {
     isActive: Attribute.Boolean;
     position: Attribute.Enumeration<['top', 'header', 'shop', 'blog']> &
       Attribute.DefaultTo<'top'>;
+    bannerImage: Attribute.Media & Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
