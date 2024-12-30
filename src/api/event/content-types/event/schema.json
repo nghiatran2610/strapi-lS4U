@@ -46,15 +46,18 @@
       "default": "top"
     },
     "bannerImage": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false,
-      "required": true
+      ]
+    },
+    "bannerUrl": {
+      "type": "string"
     }
   }
 }

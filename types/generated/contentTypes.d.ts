@@ -982,6 +982,7 @@ export interface ApiEventEvent extends Schema.CollectionType {
     position: Attribute.Enumeration<['top', 'header', 'shop', 'blog']> &
       Attribute.DefaultTo<'top'>;
     bannerImage: Attribute.Media & Attribute.Required;
+    bannerUrl: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
