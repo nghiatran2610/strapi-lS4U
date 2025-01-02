@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_mediacomponents_video_embeds",
+  "info": {
+    "displayName": "VideoEmbed",
+    "icon": "medium",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Width": {
+      "type": "float"
+    },
+    "Height": {
+      "type": "float"
+    }
+  }
+}
