@@ -1,7 +1,6 @@
 {
   "kind": "collectionType",
   "collectionName": "blog_posts",
-
   "info": {
     "singularName": "blog-post",
     "pluralName": "blog-posts",
@@ -24,7 +23,12 @@
       "type": "media",
       "multiple": false,
       "required": false,
-      "allowedTypes": ["images", "files", "videos", "audios"]
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
     },
     "focusKeywords": {
       "type": "json"
@@ -46,7 +50,12 @@
       "type": "media",
       "multiple": false,
       "required": false,
-      "allowedTypes": ["images", "files", "videos", "audios"]
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
     },
     "twitterTitle": {
       "type": "string"
@@ -58,7 +67,12 @@
       "type": "media",
       "multiple": false,
       "required": false,
-      "allowedTypes": ["images", "files", "videos", "audios"]
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
     },
     "schemaMarkup": {
       "type": "json"
@@ -87,6 +101,16 @@
     "content": {
       "type": "blocks",
       "required": true
+    },
+    "contentMedia": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
     }
   }
 }

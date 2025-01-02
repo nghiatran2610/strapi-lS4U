@@ -901,6 +901,7 @@ export interface ApiBlogPostBlogPost extends Schema.CollectionType {
       'api::tag.tag'
     >;
     content: Attribute.Blocks & Attribute.Required;
+    contentMedia: Attribute.Media;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
