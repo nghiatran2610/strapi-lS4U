@@ -101,16 +101,6 @@
     "content": {
       "type": "blocks",
       "required": true
-    },
-    "contentMedia": {
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ],
-      "type": "media",
-      "multiple": true
     }
   }
 }
