@@ -1019,7 +1019,7 @@ export interface ApiShopeeRatingShopeeRating extends Schema.CollectionType {
     star: Attribute.Integer;
     comment: Attribute.Text;
     replyComment: Attribute.Text;
-    dateTime: Attribute.DateTime & Attribute.Required;
+    dateTime: Attribute.DateTime & Attribute.Required & Attribute.Unique;
     media: Attribute.Media;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;

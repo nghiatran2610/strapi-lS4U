@@ -34,7 +34,8 @@
     },
     "dateTime": {
       "type": "datetime",
-      "required": true
+      "required": true,
+      "unique": true
     },
     "media": {
       "type": "media",
