@@ -1007,14 +1007,15 @@ export interface ApiShopeeRatingShopeeRating extends Schema.CollectionType {
     singularName: 'shopee-rating';
     pluralName: 'shopee-ratings';
     displayName: 'shopeeRatings';
+    description: '';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
     userName: Attribute.String & Attribute.Required;
-    shopId: Attribute.Integer & Attribute.Required;
-    itemId: Attribute.Integer;
+    shopId: Attribute.BigInteger & Attribute.Required;
+    itemId: Attribute.BigInteger;
     star: Attribute.Integer;
     comment: Attribute.Text;
     replyComment: Attribute.Text;

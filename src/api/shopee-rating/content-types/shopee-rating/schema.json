@@ -4,7 +4,8 @@
   "info": {
     "singularName": "shopee-rating",
     "pluralName": "shopee-ratings",
-    "displayName": "shopeeRatings"
+    "displayName": "shopeeRatings",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -16,11 +17,11 @@
       "required": true
     },
     "shopId": {
-      "type": "integer",
+      "type": "biginteger",
       "required": true
     },
     "itemId": {
-      "type": "integer"
+      "type": "biginteger"
     },
     "star": {
       "type": "integer"
@@ -36,14 +37,15 @@
       "required": true
     },
     "media": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": true
+      ]
     }
   }
 }
