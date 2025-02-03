@@ -1001,6 +1001,43 @@ export interface ApiEventEvent extends Schema.CollectionType {
   };
 }
 
+export interface ApiShopeeRatingShopeeRating extends Schema.CollectionType {
+  collectionName: 'shopee_ratings';
+  info: {
+    singularName: 'shopee-rating';
+    pluralName: 'shopee-ratings';
+    displayName: 'shopeeRatings';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    userName: Attribute.String & Attribute.Required;
+    shopId: Attribute.Integer & Attribute.Required;
+    itemId: Attribute.Integer;
+    star: Attribute.Integer;
+    comment: Attribute.Text;
+    replyComment: Attribute.Text;
+    dateTime: Attribute.DateTime & Attribute.Required;
+    media: Attribute.Media;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::shopee-rating.shopee-rating',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::shopee-rating.shopee-rating',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiTagTag extends Schema.CollectionType {
   collectionName: 'tags';
   info: {
@@ -1052,6 +1089,7 @@ declare module '@strapi/types' {
       'api::blog-post.blog-post': ApiBlogPostBlogPost;
       'api::category.category': ApiCategoryCategory;
       'api::event.event': ApiEventEvent;
+      'api::shopee-rating.shopee-rating': ApiShopeeRatingShopeeRating;
       'api::tag.tag': ApiTagTag;
     }
   }
