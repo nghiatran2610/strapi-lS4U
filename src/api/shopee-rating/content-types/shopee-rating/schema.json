@@ -47,6 +47,16 @@
         "videos",
         "audios"
       ]
+    },
+    "images": {
+      "type": "json"
+    },
+    "videos": {
+      "type": "json"
+    },
+    "cmtid": {
+      "type": "biginteger",
+      "unique": true
     }
   }
 }

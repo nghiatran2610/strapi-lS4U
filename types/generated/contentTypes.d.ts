@@ -1021,6 +1021,9 @@ export interface ApiShopeeRatingShopeeRating extends Schema.CollectionType {
     replyComment: Attribute.Text;
     dateTime: Attribute.DateTime & Attribute.Required & Attribute.Unique;
     media: Attribute.Media;
+    images: Attribute.JSON;
+    videos: Attribute.JSON;
+    cmtid: Attribute.BigInteger & Attribute.Unique;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
