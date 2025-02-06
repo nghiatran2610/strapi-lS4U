@@ -8,10 +8,11 @@ module.exports = createCoreController("api::shopee-rating.shopee-rating", ({ str
     try {
       console.log("Fetching Shopee Ratings statistics...");
 
-      const { itemId } = ctx.query; // Get `itemId` from query parameters
+      // Parse itemId from query as a number
+      let itemId = ctx.query.itemId ? Number(ctx.query.itemId) : null;
 
-      if (!itemId) {
-        console.warn("No itemId provided, returning default stats.");
+      if (!itemId || isNaN(itemId)) {
+        console.warn("No valid itemId provided, returning default stats.");
         return ctx.send({
           starCounts: { 5: 0, 4: 0, 3: 0, 2: 0, 1: 0 },
           total: 0,
@@ -20,13 +21,13 @@ module.exports = createCoreController("api::shopee-rating.shopee-rating", ({ str
 
       console.log("Filtering statistics for itemId:", itemId);
 
-      // Fetch ratings filtered by itemId
+      // Fetch ratings filtered by itemId (ensuring itemId is treated as a number)
       const reviews = await strapi.entityService.findMany("api::shopee-rating.shopee-rating", {
         fields: ["star"],
-        filters: { itemId }, // ✅ Only fetch ratings for the provided itemId
+        filters: { itemId }, // ✅ Ensure filtering by number
       });
 
-      console.log("Fetched Reviews for itemId:", itemId, reviews.length);
+      console.log(`Fetched ${reviews.length} reviews for itemId:`, itemId);
 
       if (!reviews || reviews.length === 0) {
         return ctx.send({
@@ -35,10 +36,10 @@ module.exports = createCoreController("api::shopee-rating.shopee-rating", ({ str
         });
       }
 
-      // Count occurrencess of each star rating (1 to 5)
+      // Count occurrences of each star rating (1 to 5)
       const starCounts = _.countBy(reviews, "star");
 
-      // Ensure all star ratings (1-5) are included
+      // Ensure all star ratings (1-5) are included in the response
       const formattedStarCounts = {
         5: starCounts[5] || 0,
         4: starCounts[4] || 0,
