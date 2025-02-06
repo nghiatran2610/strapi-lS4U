@@ -2,16 +2,16 @@
 # yarn lockfile v1
 
 
-"@_sh/strapi-plugin-ckeditor@^3.0.8":
-  version "3.0.8"
-  resolved "https://registry.yarnpkg.com/@_sh/strapi-plugin-ckeditor/-/strapi-plugin-ckeditor-3.0.8.tgz#6a382142651f57b895d7c5b6a007e61e737e7df4"
-  integrity sha512-gqWv8Pyh8DkZv9nf1g2X1fwfi3PkLtCQ5S/io2rK/E5ju0hd+/Y17iHfjAw2U1d9Kr8uMxDH4d96ATIEhRq07A==
+"@_sh/strapi-plugin-ckeditor@^3.0.9":
+  version "3.0.9"
+  resolved "https://registry.yarnpkg.com/@_sh/strapi-plugin-ckeditor/-/strapi-plugin-ckeditor-3.0.9.tgz#ce98c1b9ccacef6806a122232ad8c85c3fc7c978"
+  integrity sha512-W22cwUdnLP/uisNSTLvUhWoAnC9HcELPznnwP/VOIHRvi/3TJmOtCLW19td/xqmGs2N8yhAplrBQMEgxPSGcGg==
   dependencies:
     "@ckeditor/ckeditor5-react" "^9.3.1"
     "@strapi/design-system" "^1.19.0"
-    ckeditor5 "^43.3.0"
+    ckeditor5 "^43.3.1"
     prop-types "^15.8.1"
-    sanitize-html "^2.13.0"
+    sanitize-html "^2.13.1"
 
 "@babel/code-frame@^7.0.0", "@babel/code-frame@^7.16.7", "@babel/code-frame@^7.23.5", "@babel/code-frame@^7.24.1":
   version "7.24.2"
@@ -4025,7 +4025,7 @@ ci-info@3.8.0:
   resolved "https://registry.yarnpkg.com/ci-info/-/ci-info-3.8.0.tgz#81408265a5380c929f0bc665d62256628ce9ef91"
   integrity sha512-eXTggHWSooYhq49F2opQhuHWgzucfF2YgODK4e1566GQs5BIfP30B0oenwBJHfWxAs2fyPB1s7Mg949zLf61Yw==
 
-ckeditor5@43.3.1, ckeditor5@^43.3.0:
+ckeditor5@43.3.1, ckeditor5@^43.3.1:
   version "43.3.1"
   resolved "https://registry.yarnpkg.com/ckeditor5/-/ckeditor5-43.3.1.tgz#95db2b8f793191987bf2fc01e22b0a9a4d62250c"
   integrity sha512-ZZ6nIdlr9rCCp21o9d5/mVUeVPwpQKEVxkeq1MU/Jax1w8U6rnMiQWxB954Ky/HNjhZ1v1ll2+VRzb7XA+1emA==
@@ -9257,7 +9257,7 @@ sanitize-html@2.13.0:
     parse-srcset "^1.0.2"
     postcss "^8.3.11"
 
-sanitize-html@^2.13.0:
+sanitize-html@^2.13.1:
   version "2.13.1"
   resolved "https://registry.yarnpkg.com/sanitize-html/-/sanitize-html-2.13.1.tgz#b4639b0a09574ab62b1b353cb99b1b87af742834"
   integrity sha512-ZXtKq89oue4RP7abL9wp/9URJcqQNABB5GGJ2acW1sdO8JTVl92f4ygD7Yc9Ze09VAZhnt2zegeU0tbNsdcLYg==
