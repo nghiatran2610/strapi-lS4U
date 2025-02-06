@@ -35,7 +35,7 @@ module.exports = createCoreController("api::shopee-rating.shopee-rating", ({ str
         });
       }
 
-      // Count occurrences of each star rating (1 to 5)
+      // Count occurrencess of each star rating (1 to 5)
       const starCounts = _.countBy(reviews, "star");
 
       // Ensure all star ratings (1-5) are included
