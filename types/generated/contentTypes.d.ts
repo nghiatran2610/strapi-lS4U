@@ -1001,6 +1001,39 @@ export interface ApiEventEvent extends Schema.CollectionType {
   };
 }
 
+export interface ApiLayoutThemeLayoutTheme extends Schema.CollectionType {
+  collectionName: 'layout_themes';
+  info: {
+    singularName: 'layout-theme';
+    pluralName: 'layout-themes';
+    displayName: 'Layout Theme';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    background_color: Attribute.String;
+    background_image: Attribute.Media;
+    pattern_image: Attribute.Media;
+    pattern_height: Attribute.Float;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::layout-theme.layout-theme',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::layout-theme.layout-theme',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiShopeeRatingShopeeRating extends Schema.CollectionType {
   collectionName: 'shopee_ratings';
   info: {
@@ -1093,6 +1126,7 @@ declare module '@strapi/types' {
       'api::blog-post.blog-post': ApiBlogPostBlogPost;
       'api::category.category': ApiCategoryCategory;
       'api::event.event': ApiEventEvent;
+      'api::layout-theme.layout-theme': ApiLayoutThemeLayoutTheme;
       'api::shopee-rating.shopee-rating': ApiShopeeRatingShopeeRating;
       'api::tag.tag': ApiTagTag;
     }
